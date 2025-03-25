@@ -7,7 +7,6 @@ describe("VotingSystem Contract", function () {
     beforeEach(async function () {
         [deployer, voter1] = await ethers.getSigners();
 
-        // Deploy the contract with candidate names
         VotingSystem = await ethers.getContractFactory("VotingSystem");
         votingSystem = await VotingSystem.deploy(["Pratap", "Nithin", "Mohith"]);
         await votingSystem.deployed();
@@ -19,7 +18,6 @@ describe("VotingSystem Contract", function () {
         const candidate = await votingSystem.getCandidate(0);
         expect(candidate.name).to.equal("Pratap");
         
-        // Convert BigNumber to a regular number for comparison
         expect(candidate.votes.toNumber()).to.equal(1);
     });
 
