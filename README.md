@@ -82,23 +82,6 @@ This script:
 
 ---
 
-## Project Structure
-
-```
-Voting-System/
-│-- contracts/             # Solidity smart contracts
-│   ├── VotingSystem.sol   # Main contract file
-│-- scripts/               # Deployment and interaction scripts
-│   ├── deploy.js          # Deploys contract
-│   ├── interact.js        # Casts votes and fetches results
-│-- test/                  # Test cases for smart contracts
-│-- hardhat.config.js      # Hardhat configuration file
-│-- package.json           # Dependencies and scripts
-│-- README.md              # Project documentation
-```
-
----
-
 ## Deploying to a Testnet (Sepolia)
 
 To deploy on **Sepolia**, update `hardhat.config.js` with your **Alchemy/Infura RPC URL** and wallet **private key**:
@@ -127,7 +110,3 @@ To run contract tests:
 ```bash
 npx hardhat test
 ```
-
----
-
-This README provides **detailed setup instructions, usage, and deployment steps**. Let me know if you need any modifications.
